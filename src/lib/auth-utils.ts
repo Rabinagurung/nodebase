@@ -5,6 +5,7 @@ import { auth } from "./auth";
 
 export const requireAuth = async () =>{
 
+    //calling get session on server 
     const session = await auth.api.getSession({
         headers: await headers()
     });
