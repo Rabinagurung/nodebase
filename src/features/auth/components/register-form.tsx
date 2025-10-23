@@ -12,7 +12,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { authClient } from '@/lib/auth-client';
-import { da } from 'date-fns/locale';
 
 
 
@@ -76,6 +75,7 @@ const RegisterForm = () => {
                                     className='w-full'
                                     disabled={form.formState.isSubmitting}
                                 >
+                                    <Image alt='github image' src="/logos/github.svg" width={20} height={20}/>
                                     Continue with Github
                                 </Button>
                                  <Button
@@ -84,6 +84,7 @@ const RegisterForm = () => {
                                     className='w-full'
                                     disabled={form.formState.isSubmitting}
                                 >
+                                    <Image alt='google image' src="/logos/google.svg" width={20} height={20}/>
                                     Continue with Google
                                 </Button>
                             </div>
@@ -163,4 +164,4 @@ const RegisterForm = () => {
   )
 }
 
-export default RegisterForm
+export default RegisterForm;

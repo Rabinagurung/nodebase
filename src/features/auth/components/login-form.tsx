@@ -14,7 +14,6 @@ import { Input } from '@/components/ui/input';
 import { authClient } from '@/lib/auth-client';
 
 
-
 const loginFormSchema = z.object({
     email: z.email("Please enter a valid email address"),
     password: z.string().min(1, "Password is required"), 
@@ -45,9 +44,7 @@ const LoginForm = () => {
                 toast.error(ctx.error.message);
             }
         }, 
-      
-    )
-    }
+    )}
 
   return (
     <div className='flex flex-col gap-6'>
@@ -67,6 +64,7 @@ const LoginForm = () => {
                                     className='w-full'
                                     disabled={form.formState.isSubmitting}
                                 >
+                                    <Image alt='github image' src="/logos/github.svg" width={20} height={20}/>
                                     Continue with Github
                                 </Button>
                                  <Button
@@ -75,6 +73,7 @@ const LoginForm = () => {
                                     className='w-full'
                                     disabled={form.formState.isSubmitting}
                                 >
+                                    <Image alt='google image' src="/logos/google.svg" width={20} height={20}/>
                                     Continue with Google
                                 </Button>
                             </div>
