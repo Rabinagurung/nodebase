@@ -15,13 +15,6 @@ const prisma = new PrismaClient();
  *  - Polar plugin for customer and subscription management, including
  *    checkout and portal functionality.
  *
- * @constant
- * @type {import("better-auth").BetterAuthInstance}
- *
- * @example
- * ```ts
- * const session = await auth.api.getSession({ headers: req.headers });
- * ```
  */
 export const auth = betterAuth({
   database: prismaAdapter(prisma, {
