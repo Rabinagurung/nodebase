@@ -106,6 +106,6 @@ export const premiumProcedure = protectedProcedure.use(
     }
 
     // Extend context with customer info for downstream resolvers
-    return next({ ctx: {...ctx, ...customer} })
+    return next({ ctx: {...ctx, customer} })
   },
 )
