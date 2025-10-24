@@ -48,8 +48,7 @@ export const executeAI = inngest.createFunction(
     { event: "execute/ai" }, 
     async ({event, step}) => {
        
-        await step.sleep("pretend", "5s")
-
+        await step.sleep("pretend", "5s");
         
         const { steps: geminiSteps } = await step.ai.wrap(
             "gemini-generate-text", 
